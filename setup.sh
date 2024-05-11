@@ -3,6 +3,9 @@
 NAME="Charlton Lim"
 EMAIL="cadmusthefounder@gmail.com"
 
+echo "Creating directories..."
+mkdir ~/Documents/Workspace
+
 echo "Installing xcode-stuff"
 xcode-select --install
 
@@ -69,6 +72,14 @@ brew install macvim
 brew install trash
 brew install tree
 brew install wget
+brew install zsh
+
+echo "Installing Oh My Zsh..."
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Installing Powerline..."
+brew install powerlevel10k
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 
 echo "Installing applications..."
 # Apps
